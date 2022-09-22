@@ -1,5 +1,6 @@
 # product
-
+#To run the spring boot application
+>mvn spring-boot:run
 
 <img width="635" alt="Products List" src="https://user-images.githubusercontent.com/87556750/191671006-1e08678b-475e-41e0-8b01-3ec04f513300.png">
 
