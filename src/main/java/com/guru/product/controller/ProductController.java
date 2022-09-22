@@ -39,8 +39,13 @@ public class ProductController {
 	
 	//creating a delete mapping that deletes a specified product  
 	@DeleteMapping("/product/{productId}")  
-	private void deleteProduct(@PathVariable("productId") int productId){  
-		productService.delete(productId);  
+	private String deleteProduct(@PathVariable("productId") int productId){  
+		try {
+			productService.delete(productId); 
+		} catch (Exception e) {
+			return "Exception occured";
+		}
+		return "Deleted";
 	} 
 	
 	//creating post mapping that post the product detail in the database  
